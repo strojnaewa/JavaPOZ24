@@ -18,20 +18,26 @@ public class Lotto {
                     System.out.println("Liczby się powtarzają!");
                     i--;
                     break;
+
                 } else {
-                    tab[j] = a;
+                    tab[i] = a;
+                    break;
                 }
             }
+
+
+        }
+        for(int i=0; i<=5;i++){
+            System.out.print(tab[i]+",");
         }
         Random liczbaLos = new Random();
 
         int[] los = new int[6];
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i <=5; i++) {
             int losA = liczbaLos.nextInt(48) + 1;
-            System.out.print(losA+",");
+            System.out.print(losA + ",");
             for (int j = 0; j <= 5; j++) {
                 if (losA == los[j]) {
-                    System.out.println("Liczby się powtarzają!");
                     i--;
                     break;
                 } else {
@@ -40,11 +46,11 @@ public class Lotto {
             }
 
         }
-        int licznik=0;
-        for (int i=0;i<6;i++){
-            for(int j=0;j<6;i++){
+        int licznik = 0;
+        for (int i = 0; i <= 5; i++) {
+            for (int j = 0; j <= 5; i++) {
 
-                if(tab[i]==tab[j]){
+                if (tab[i] == tab[j]) {
                     licznik++;
 
                 }
@@ -53,6 +59,6 @@ public class Lotto {
 
         }
 
-        System.out.println("wystąpienia "+licznik);
+        System.out.println("wystąpienia " + licznik);
     }
 }

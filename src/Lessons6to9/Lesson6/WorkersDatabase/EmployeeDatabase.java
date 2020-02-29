@@ -8,7 +8,7 @@ public class EmployeeDatabase {
     private int employeeCount = 0;
 
     private int pobierIndexPracownika() {
-        Scanner scanner = new Scanner(System.in);
+         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj index pracownika do usuniecia");
         int index = Integer.parseInt(scanner.nextLine());
         return index;
@@ -16,8 +16,8 @@ public class EmployeeDatabase {
 
     private int howManyEmployees() {
         int sum = 0;
-        for (int i = 0; i < employeeDatabase.length; i++) {
-            if (employeeDatabase[i] != null) {
+        for (Employee employee : employeeDatabase) {
+            if (employee != null) {
                 sum++;
             }
 

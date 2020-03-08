@@ -18,11 +18,29 @@ public class ProstokatProgram {
         int bokA = scanner.nextInt();
         System.out.println("Podaj bok B");
         int bokB = scanner.nextInt();
-        Prostokat prostokat = new Prostokat(bokA, bokB);
-        System.out.println("Pole prostokąta to " + prostokat.pole());
-        System.out.println("obwód prostokąta to " + prostokat.obwod());
-    prostokat.setBokA(5);
-    prostokat.getBokA();
+
+        Zajecia5.Prostokat prostokat = new Zajecia5.Prostokat(bokA, bokB);
+        try {
+            prostokat.pole();
+        } catch (IllegalArgumentException e){
+            System.out.println("Boki ujemne!");
+        } finally {
+            System.out.println("Finally");
+        }
+
+
+        try{
+            System.out.println(prostokat.obwod());}
+        catch (IllegalArgumentException e){
+            System.out.println("Boki ujemne!");
+        } finally {
+            System.out.println("Finally");
+        }
+
+        //System.out.println("Pole prostokąta to " + prostokat.pole(bokA,bokB));
+        //System.out.println("obwód prostokąta to " + prostokat.obwod(bokA,bokB));
+    //prostokat.setBokA(5);
+    //prostokat.getBokA();
 
     }
 }

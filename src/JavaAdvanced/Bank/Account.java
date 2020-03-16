@@ -1,10 +1,6 @@
 package JavaAdvanced.Bank;
 
 
-import JavaAdvanced.NegativeBalanceException;
-
-import java.util.IllegalFormatException;
-
 public class Account {
     protected int balance;    //protected pozwala na dostep do pola w podrzędnych klasach
     private int accountNumber;

@@ -1,8 +1,5 @@
 package JavaAdvanced.Bank;
 
-import JavaAdvanced.NegativeBalanceException;
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Scanner;
 
 public class Bank {
@@ -57,7 +54,7 @@ public class Bank {
                 System.out.println("Obsługa catch" + e.getMessage());
             }catch (NegativeBalanceException e){
                 System.out.println(e);
-            } finally {
+            }finally {
                 System.out.println("Zawsze się wykonam");
             }
 

@@ -7,13 +7,20 @@ public class Prostokat {
     public Prostokat(int bokA, int bokB) {
         this.bokA = bokA;
         this.bokB = bokB;
+
     }
 
     public int pole() {
+        if (bokA<=0 || bokB<=0){
+            throw new IllegalArgumentException("Bok ujemny!");
+        }
         return bokA * bokB;
     }
 
     public int obwod() {
+        if (bokA<=0 || bokB<=0){
+            throw new IllegalArgumentException("Bok ujemny!");
+        }
         return 2 * bokA + 2 * bokB;
     }
 
